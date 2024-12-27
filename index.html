@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .form-image {
+            width: 100%;
+            /* Adjust the width as per your need */
+            max-width: 300px;
+            /* Optional: Set a max-width */
+            display: block;
+            /* Makes it a block-level element */
+            margin: 0 auto;
+            /* Centers the image horizontally */
+            border-radius: 8px;
+            /* Optional: Add rounded corners */
+        }
+
+
+        #form-section {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 90vh;
+            /* Fix the height to ensure space for scrolling */
+            overflow-y: auto;
+            /* Enable vertical scrolling */
+        }
+
+
+        .form-header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group textarea {
+            resize: none;
+            height: 80px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .link {
+            font-size: 20px;
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .close {
+            display: block;
+            text-align: right;
+            cursor: pointer;
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #aaa;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Image section -->
+        <img src="Main Picture.JPG" alt="Registration Form Banner" class="form-image">
+
+        <div class="link" id="openForm">Registration Form</div>
+        
+        <div id="form-section">
+            <div class="close" id="closeForm">&times;</div>
+            <div class="form-header">STUDENT REGISTRATION FORM</div>
+            <form>
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="Enter the First Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Enter the Last Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email ID</label>
+                    <input type="email" id="email" placeholder="Enter the Email Address">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">Mobile Number</label>
+                    <input type="text" id="mobile" placeholder="Enter the Mobile Number">
+                </div>
+
+                <div class="form-group">
+                    <label>Gender</label>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" placeholder="Enter the Address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Enter the City Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="pincode">Pin Code</label>
+                    <input type="text" id="pincode" placeholder="Enter the Pin Code">
+                </div>
+
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state" placeholder="Enter the State">
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="country" placeholder="Enter the Country Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Hobbies</label>
+                    <input type="checkbox" value="Drawing"> Drawing
+                    <input type="checkbox" value="Singing"> Singing
+                    <input type="checkbox" value="Dancing"> Dancing
+                    <input type="checkbox" value="Sketching"> Sketching
+                </div>
+
+                <div class="form-group">
+                    <label>Qualifications</label>
+                    <table>
+                        <tr>
+                            <th>Sl.No</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="form-group">
+                    <label for="course">Courses Applied For</label>
+                    <select id="course">
+                        <option>Select any course</option>
+                        <option>Course 1</option>
+                        <option>Course 2</option>
+                        <option>Course 3</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="file">Upload Your Pic</label>
+                    <input type="file" id="file">
+                </div>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const openForm = document.getElementById('openForm');
+        const closeForm = document.getElementById('closeForm');
+        const formSection = document.getElementById('form-section');
+
+        openForm.addEventListener('click', () => {
+            formSection.style.display = 'block';
+        });
+
+        closeForm.addEventListener('click', () => {
+            formSection.style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
